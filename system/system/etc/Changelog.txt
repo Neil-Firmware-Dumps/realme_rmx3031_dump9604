@@ -1,0 +1,523 @@
+====================
+     06-27-2022
+====================
+
+   * build/make
+941f14a4c9 Merge pull request #40 from ShevT/12.1
+
+   * frameworks/base
+799f903f89e3 Change the wakeup alarms for "light-doze-maintenance step" to non-wakeup alarms
+a6350ec667c1 AudioService: Fix issue with linked notification volume
+8f649862e36d Merge 'lineage-19.1' into 12.1
+484c59b972c1 SystemUI: screenshot: add delay for long-press partial screenshot
+45cefae04e40 SystemUI: screenshot: close QS after launching long screenshot activity
+92abcecfe2bd SystemUI: screenshot: disable magnification for partial screenshots
+834defa7e31a SystemUI: screenshot: add extra crop boundaries
+e110cba8fecf SystemUI: screenshot: remove duplicate clamping on move action
+
+   * frameworks/native
+fb1b39bc0d opengl: tests: Add explict android:exported flag to manifests
+
+   * packages/apps/GameSpace
+521fcf1 New Crowdin updates (#11)
+
+   * packages/apps/Launcher3
+2cce885a98 TaskViewUtils: Add valid check for SurfaceControl
+1d9608c930 RecentsView: Add null check for RemoteAnimationTargets and RemoteAnimationTargets.nonApps
+
+   * packages/apps/crDroidSettings
+94e3278d New Crowdin updates (#936)
+
+====================
+     06-26-2022
+====================
+
+   * art
+e42dbc8b94 Fix missing receiver NPE checks for field get/set MH
+5493d2405e Do not fail internally in the executable check if the file is missing.
+8ac6c9fc2f Do not preload ThreadLocalRandom class.
+f354a5cbcd Avoid PushLocalFrame(0) CHECK failure
+f33be7a05f Don't call entry callbacks when moving to JITed from interpreter
+8d2e1890b2 Add a null check for suppressed exception.
+137f069a3a Only madvise for jank-perceptible processes
+7310178393 Avoid inopportune GC with explicit gc() call
+29670ac99d Force inlining in `CodeInfo` constructors.
+
+   * device/realme/RMX3031
+f4a2375 RMX3031: Enable Blur
+b0bb425 RMX3031: overlay: Change default device name
+b551d62 RMX3031: overlay: Add settings provider
+
+   * frameworks/base
+13429c61674c SystemUI: screenshot: remove misplaced call to set crop view padding
+1ce45bc32ce8 SystemUI: screenshot: open long screenshot activity for partial screenshots
+61c48a1384ae Revert "SystemUI: Prevent loop with display timeout"
+69ffd1778904 Clear BCB if space allocation failed
+90870a969494 ParcelableHolder: assert stability on read
+87ffb64ec2d5 Store pending override config instead of creating ActivityClientRecord
+21aad271148b Fix inaccuracy in biometric timeout
+a3774d327f5c Fix inaccuracy in biometric timeout
+5dd6dbd9b425 Properly fix revokePermissionsNoLongerImplicitLocked() for shared UIDs.
+586c3ed5fb35 Block animation transfer after surface animation finishes.
+9f31dd040e8c Fix content insets calculation error when taking task snapshot.
+681456cad77a AudioService: PlaybackActivityMonitor: fix exploding list
+
+   * kernel/realme/RMX3031
+5e5991669 deconfig: Update kernel name
+
+   * packages/apps/Launcher3
+e0af3b0588 Launcher3: Restore blur depth on configuration change
+af4958f5f3 Launcher3: Set hotseat icons to 4 for 4_by_5 grid
+bac5c184b1 Launcher3: Add device category for additional profiles
+310bec5e08 Launcher3: Sort device profiles
+d4ca0f705c Launcher3: Adjust the icon size to the grid size
+
+====================
+     06-25-2022
+====================
+
+   * frameworks/base
+04c86198b198 SystemUI: Set custom scrim alpha in ScrimState
+56e40800a5f7 SystemUI: Remove trace counter from ScrimState
+8e86c52a7b83 Revert "SystemUI: Use color accent for charging animation"
+
+   * hardware/qcom/camera
+5a517ca2 msm8998: camera: Switch to display_headers lib include
+
+   * packages/apps/Launcher3
+cb7212a996 Launcher3: Update icons from lawnicons_teamfiles
+
+   * vendor/lineage
+18ba40dd kernel: Move TARGET_KERNEL_ADDITIONAL_FLAGS to kernel task
+9499e403 config: Don't pass CFLAGS_MODULE="-fno-pic" if using LLVM
+a9667c36 kernel: Switch to AOSP DTC instead of using scripts/dtc
+c6140232 kernel: Use LLVM's substitutes for GNU binutils if possible
+
+====================
+     06-24-2022
+====================
+
+   * build/soong
+696355845 soong: cc: Enable global O3
+
+   * device/lineage/sepolicy
+c645c8a Merge 'lineage-19.1' into 12.1
+
+   * device/realme/RMX3031
+d6abbcf RMX3031: Build GCamGo
+
+   * frameworks/base
+db5f5d2f38a8 services: fix a synchronization issue in CachedAppOptimizer
+3a7c8d980c21 Merge 'lineage-19.1' into 12.1
+5d3b88f23b8e Revert "Freeze all package processes before killing"
+
+   * frameworks/native
+ef81c36184 Merge branch 'lineage-19.1' into 12.1
+
+   * packages/apps/Camera2
+a31a99491 Camera2: remove unused drawables
+581cc9bf6 Camera2: remove duplicate getDisplayRotation()
+
+   * packages/apps/GameSpace
+4ec4b86 GameSpace: Improve strings
+
+   * packages/apps/Launcher3
+d4573e5cf8 TaskViewUtils: add a null check on topMostSimulators array
+
+   * system/sepolicy
+fc9359c9e Merge 'lineage-19.1' into 12.1
+be82afe07 sepolicy: Add sdcard_posix_contextmount_type attribute to API 32
+52b183c7c Re-order inclusion of mlstrustedsubject to avoid issues
+5de031594 sepolicy: Add sdcard_posix_contextmount_type attribute
+59ccec65c Give mediaprovider_app mlstrustedsubject
+
+   * system/vold
+1708991 Merge 'lineage-19.1' into 12.1
+b75432d vold: Accept Linux GPT partitions on external SD cards
+8c8ba21 Fix the group permissions of the sdcard root.
+13ae400 vold ext4/f2fs: do not use dirsync if we're mounting adopted storage
+63e51c2 vold: Mount ext4/f2fs portable storage with sdcard_posix
+85c4b0a vold: Honor mount options for ext4/f2fs partitions
+7e71d4f vold: Support internal storage partitions
+79689c1 vold: Fix fsck on public volumes
+74a24d6 vold: add support for more filesystems for public storage
+
+   * vendor/lineage
+d0b8053d build: Disable ABI checks
+
+====================
+     06-23-2022
+====================
+
+   * build/make
+e73a86cc28 Don't build QuickSearchBox
+
+   * device/realme/RMX3031
+c34f3c7 RMX3031: Add touchscreen gestures HIDL HAL
+6c660f2 RMX3031: Drop touchpanel keylayout
+28e5a6f RMX3031: parts: Set condition to throw debug logs only if Debug boolean set
+
+   * frameworks/av
+2fc0fdc7e2 Mark codec2_vndk_test as isolated:false
+8fdd529ab5 libstagefright: Bug Fix
+03756385a5 MediaCodec: force synchronous release if setting release surface fails
+06ebb3659f Add format value for NULL offload info
+fc54cdf0f7 Fix/suppress bugprone-branch-clone warnings
+16d75e38c0 RELAND CCodec: don't drop metadata for output with flag FLAG_DROP_FRAME.
+6bc418467e Implement PUSH_BLANK_BUFFERS_ON_STOP in Codec2
+701213c9c2 Fix code issues in APM found with unit tests
+28758a0f40 Camera: Account for any pending freed buffers during the offline switch
+c9475649ed CCodecBuffers: fix null buffer PCM conversion
+8a50c23d45 CCodec: require static HDR info support for AV1 HDR10 profile
+0da296b8ed C2Soft Enc: Use correct matrix and range in RGB to YUV conversion
+4c13cb2271 Fix no tunning param case
+6dab566abd Camera: Fix race between notifyDeviceStateChange and removeProvider
+
+   * frameworks/base
+6ed5e14a4159 SystemUI: Fix few issues with toggling privacy indicators
+596268b941a3 Fix daveys when latch_unsignaled is used
+cf22e1f8ca39 Merge pull request #862 from PacMM79/12.1-a
+badb5b1b4811 QSPanel: Add rotationX animation to quick settings tiles [1/2]
+ef8d5e1f58c2 New Crowdin updates (#860)
+
+   * lineage-sdk
+acbec124 Merge 'lineage-19.1' into 12.1
+
+   * packages/apps/Dialer
+55bb632fc Merge 'lineage-19.1' into 12.1
+
+   * packages/apps/Etar
+f6b1626d Merge 'lineage-19.1' into 12.1
+
+   * packages/apps/GameSpace
+ac39a41 New translations (#10)
+
+   * packages/apps/Launcher3
+801cba20e2 Merge 'lineage-19.1' into 12.1
+
+   * packages/apps/LineageParts
+f6adaae Merge 'lineage-19.1' into 12.1
+
+   * packages/apps/Messaging
+edb4635 Merge 'lineage-19.1' into 12.1
+
+   * packages/apps/Settings
+4d59711c81 Merge 'lineage-19.1' into 12.1
+
+   * packages/apps/SetupWizard
+cefa057 Merge 'lineage-19.1' into 12.1
+
+   * packages/apps/TvSettings
+12a85abce Revert "TwoPanelSettings: improve category title text appearance"
+a43cc365e Revert "TwoPanelSettings: bring back ripple"
+aa45e9440 Revert "TvSettings: update preference item corner radius"
+
+   * packages/apps/Updater
+fbeafb0 Merge 'lineage-19.1' into 12.1
+
+   * packages/apps/crDroidSettings
+1eb3bcc0 Merge pull request #935 from PacMM79/12.1-a
+fda5db57 crdroid: Add rotationX animation to quick settings tiles [2/2]
+a4b5e76a New Crowdin updates (#934)
+
+   * packages/inputmethods/LatinIME
+ba2d88c09 Merge 'lineage-19.1' into 12.1
+
+   * vendor/lineage
+50e37598 config: Disable iorapd
+8fd7b198 Revert "soong: Drop TARGET_USES_QTI_CAMERA_DEVICE"
+404b4778 overlay: Use and update config_indicatorExemptedPackageNames
+ea8edd3b config: Cleanup and update common props from Pixel
+dd5c8b91 config: Optimize Launcher3 and Settings for speed
+ef854fe6 overlay: Exclude ThemePicker from RRO
+5c048b1e config: Properly disable blur on app launch
+53a8d740 build: Override host metadata
+1302b174 apns: Grameenphone uses APN 'gpinternet'
+93deda59 overlay: Use pixel themes stub package for ThemePicker
+2d5abb98 overlay: Update overlays from google config
+74cde0af config: Drop unused package
+b971730e Revert "device_config: Show setting to disable location indicators"
+b56744f8 overlay: Update SettingsProvider defaults
+1092ae33 Revert "overlay: Default to Seedvault backup transport"
+f7617678 overlay: Add Flipendo as powersave mode listener
+99aee57f overlay: Define system wellbeing package
+5857d391 overlay: Update configs from pixel
+568ab82f overlay: [temporary] don't report statementservice crashes
+7f8a7172 device_config: Convert location indicators to soft config
+1cf38b50 device_config: Update Live Caption configs for Pixel 6
+0caaa626 device_config: Update Now Playing database to 2021-12-12
+0d5ec649 overlay: Start using custom systemui vendor service
+e619a46e device_config: Enable maching learning back gesture
+e448a9d4 overlay: SystemUI: Switch to custom SystemUI factory
+0c7c20f9 overlay: Add pixel settings defined earlier
+f271fb94 overlay: Force disable ambient music components
+0aec4e4c device_config: Update config
+6326d525 crdroid: Let adb unsecure only for eng builds
+b6fc654d kernel: Use newest clang for kernel build by default
+c54e4c2c build: Add quick tap permissions and flag
+27172c09 soong: Update camera_in_mediaserver_defaults
+d538dafa vendor: soong: Add camera_needs_client_info_lib
+1b00e884 crdroid: Generate OTA json at build time
+8d698af1 crdroid: Drop custom adb drawable
+dd6e4f24 crdroid: Clean up wallpaper overlay
+e28518dd crdroid: Change backuptool version for GMS builds
+d2eb4ca2 build: Ship as crDroid based on LOS
+57a79f21 crdroid: Remove TrebuchetOverlay
+30c4f0dc crdroid: Add changelog script
+3d0331f5 crdroid: Moved bootanimation to addons
+
+   * vendor/qcom/opensource/commonsys/system/bt
+739a8e570 Merge 'lineage-19.1' into 12.1
+
+====================
+     06-22-2022
+====================
+
+   * external/setupcompat
+17fe669 Merge 'lineage-19.1' into 12.1
+
+   * frameworks/av
+b89637e0e8 Add AC4Tbl params for dolby AC4 decoder [1/2]
+
+   * frameworks/native
+ec27d2c1e4 Add AC4Tbl params for dolby AC4 decoder [2/2]
+
+   * packages/apps/Contacts
+30f898b64 Add READ_PHONE_NUMBERS to requested permissions for Contacts
+573c7bc58 Contacts: Device Contacts: Simplify Email
+e0b9c83a7 Contacts: Device Contacts: Simplify phone type
+00f285d20 Contacts: Device Contacts: Add relation
+6f7ecfbfd Contacts: Device Contacts: Allow adding dates
+
+   * packages/apps/Gallery2
+2065dd6ca Rename jni libs back to their original names
+cbcd7b221 Move Gallery2 back to product partition
+ddd2b324d Drop platform API usage
+1aee84ddd Drop privileged app and platform sig
+135e64a5c Gallery2 - Handle special character '×' (in addition to 'x') in the resolution string.
+1f4c5def0 AOSP/Gallery - Deleted "Set As" menu item and ability to ATTACH_DATA.
+d86de8900 AOSP/Gallery2 - Disable copying of arbitrary private file of Gallery2 into External Storage.
+
+   * vendor/crowdin
+e03a584 Automatic translation import
+
+====================
+     06-21-2022
+====================
+
+   * frameworks/base
+9b80299d9c70 UserDataPreparer: only delete contents of user's system CE and DE dirs
+21f3ccf7e1a5 UsageStatsService: don't create stuff directly in /data/system_de
+997a75405291 bit: avoid calling strdup(NULL)
+b44800f496ed Fix nanosleep in BootAnimation
+d6d746c207cf Add truncateStringForUtf8Storage()
+2ff322833489 android_util_Process: fix length checking logic
+179ec791af93 Fix NPE in WakeLock#finalize for unit test
+917038219746 Handle non-exist permission group correctly for pm list permissions
+02a99fa18848 Provide gesture and tappable element insets for caption
+a8c4396b4620 EntropyMixer: ensure new seed file is as good as old one
+bddbe76a62be Use CopyOnWriteArrayList for mGroupDevices
+88c5e4018dc2 Clear mInterface before calling resetIkeState()
+d906f32e05b8 Fix StageCoordinator unexpected onDisplayAreaVanished
+44b27eae66a8 Fix wakelock under-locked issue
+efc8c2a608a7 NfcA: Fix an NPE in constructor
+894042494101 Consolidate clearing mImeInsetsFrozenUntilStartInput
+7f1e30f31910 Decode the input of both setStream and setResource calls first
+874dad2766e7 NetworkPolicyManagerService: turn this into just a warning
+11aa0e2113ae Bad lock object.
+40e208660853 Freeze all package processes before killing
+734e5f780159 QSPanel: Use Tuner API for QS tile animation style
+38f11c99415f fwb: Add animations to quick settings tiles [1/2]
+7f4501b8fa7b Automatic translation import
+
+   * lineage-sdk
+fd9f3839 Automatic translation import
+
+   * packages/apps/Backgrounds
+6014432 Automatic translation import
+
+   * packages/apps/Camera2
+82fd38654 Automatic translation import
+
+   * packages/apps/Contacts
+ddf09f0e9 Automatic translation import
+
+   * packages/apps/Dialer
+83c75fef0 Automatic translation import
+
+   * packages/apps/Eleven
+5c61fbfd Automatic translation import
+
+   * packages/apps/Etar
+70563b6b Automatic translation import
+
+   * packages/apps/FlipFlap
+3936ffc Automatic translation import
+
+   * packages/apps/GameSpace
+7e6e3ad New Crowdin updates (#9)
+
+   * packages/apps/Jelly
+8ae4892 Automatic translation import
+
+   * packages/apps/Launcher3
+c54542a479 Automatic translation import
+98b4bedb52 New Crowdin updates (#243)
+
+   * packages/apps/LineageParts
+8167c25 Automatic translation import
+
+   * packages/apps/Messaging
+49dae84 Automatic translation import
+
+   * packages/apps/Recorder
+a6b4087 Automatic translation import
+
+   * packages/apps/Settings
+7aa1333516 Automatic translation import
+
+   * packages/apps/SetupWizard
+a67a713 Automatic translation import
+
+   * packages/apps/Updater
+b5dca52 Automatic translation import
+1a763d6 New translations cr_strings.xml (Hebrew) (#32)
+
+   * packages/apps/crDroidSettings
+e8ece85a crdroid: Add animations to quick settings tiles [2/2]
+60634090 New Crowdin updates (#929)
+
+   * packages/inputmethods/LatinIME
+1b25c366a Automatic translation import
+
+   * packages/providers/DownloadProvider
+ec3bcd95 Automatic translation import
+
+   * packages/resources/devicesettings
+806a38f Automatic translation import
+
+   * packages/services/Mms
+fff00f3 Automatic translation import
+
+   * vendor/lineage
+87c0acd0 Revert "kernel: Remove unneeded MKDTIMG dependency"
+
+   * vendor/qcom/opensource/fm-commonsys
+e6697a2 Automatic translation import
+
+====================
+     06-20-2022
+====================
+
+   * device/realme/RMX3031
+31c5bce RMX3031: overlay: Define max visible icons
+2b238ba RMX3031: sepolicy: Allow charger to write backlight nodes
+48ec473 RMX3031: Use MIUI power-off charging from merlin
+
+   * frameworks/base
+65e43fec3b92 SystemUI: Fix daily data view in QS footer
+7f5a6ddc75d5 SystemUI: Toggle data usage view on QS footer [1/2]
+1ecbca953f6e SystemUI: Show daily data usage in QS footer
+b772aa4cf540 ScrimController: User Tuner API to apply custom alpha
+4a1c245bf1eb SystemUI: Transparent QS customization
+532bc61815db base: Fix black screen issue due to wallpaper decoding exceptions
+a4fc755799c4 Fix JobStoreTest after adding defensive copy to NetworkRequest.Builder
+72c5914b28b3 Watchdog: run emergency sync before killing system
+81dddfcbc40e neko/Cat: Mark FLAG_IMMUTABLE PendingIntent with FLAG_MUTABLE
+92aa08ba5fbf Delete skipCallbacks when Exception dispatchInputEvent beacuse calling finishInputEvent twice will cause 'Native Crash'
+05e12e228727 Move binder latency data logging to a background thread to improve performance of the main thread.
+2faa458fb2be Fix the wrong of dismisssurface state under multi-threading
+f85f69b58980 Fix OOM cache app optimizer flaky test.
+ca32b41c577f Fix MtpDatabase multithreading NullPointerException
+14d6d49c0a9d ServiceRegistry: Don't throw an exception if OEM_LOCK is missing
+987e75db1e4e InputWrapper: Opt out early if session == null
+bb17b7e0cb8b AuthRippleController: Always finish the LightRevealScrim
+d7fbd684302b AuthRippleController: Only update sensor location when necessary
+c7bcbfc96279 Crash occured due to null pointer exception.
+dd5ab48ac545 frameworks: Fix null pointer issue in ArrayAdapter
+92ab3de0611e view: add null check for dispatch touch view
+01bd43db453b base: log spill when dragging
+6804a5d33329 AlarmManagerService: Reduce log level wtf -> w
+ebce8fcb3337 SystemUI: Fix pulseOut fails before fully pulsing
+
+   * packages/apps/crDroidSettings
+27e30148 crdroid: Toggle data usage view on QS footer [2/2]
+
+   * vendor/realme/RMX3031
+09a2ffa RMX3031: Use MIUI poweroff charging animation from merlin
+
+====================
+     06-19-2022
+====================
+
+   * vendor/codeaurora/telephony
+a5c1a53 IMS: Add Motorola specific API for VT
+
+   * vendor/lineage
+35c91c02 apns: Remove user_editable="false" for user visible APNs
+b2006b37 lineage: prebuilt: Update T-Mobile U.S. APNs from SQ3A.220605.009.B1
+d43c2faa lineage: prebuilt: Drop GIV Mobile, dead
+1b1bdb34 lineage: prebuilt: Drop ROK Mobile
+44a7b9f0 lineage: prebuilt: Drop UVA Mobile
+99a1642c lineage: prebuilt: Update TMO Straight Talk APNs from SQ3A.220605.009.B1
+fee24e9d lineage: prebuilt: Update US Mobile APN
+afc71419 lineage: prebuilt: Add Carrier ID and MVNO ID for Family Mobile (Walmart)
+829b55ba lineage: prebuilt: Update Mensajes Multimedia from SQ3A.220605.009.B1
+31ffa024 lineage: prebuilt: Drop Telcel America APN
+f83b9597 lineage: prebuilt: Add Carrier ID and MVNO ID for T-Mobile Ting
+15cda0f9 lineage: prebuilt: Add Carrier ID and MVNO ID for GoSmart
+2f13ad1c lineage: prebuilt: Update Cellular One APNs from SQ3A.220605.009.B1
+068453d5 lineage: prebuilt: Drop APN for Brightspot Mobile
+18b01189 lineage: prebuilt: Update 'Telcel Internet' APN from SQ3A.220605.009.B1
+6966b152 lineage: prebuilt: Update Simple APNs from SQ3A.220605.009.B1
+caa3bddf kernel: Remove unneeded MKDTIMG dependency
+709371be kernel: Ensure dtb(o) always get rebuilt
+9955cd65 kernel: Avoid unnecessary savedefconfig
+8c6398e9 kernel: Clean up kernel copy recipes
+
+====================
+     06-18-2022
+====================
+
+   * frameworks/base
+a5ca55c94e60 SystemUI: MediaOutputController: Avoid NPE when created with empty packageName
+
+   * vendor/nxp/opensource/commonsys/external/libnfc-nci
+0160798c Add .gitupstream file
+
+   * vendor/nxp/opensource/commonsys/frameworks
+f96583d Add .gitupstream file
+
+   * vendor/nxp/opensource/commonsys/packages/apps/Nfc
+9624add5 Add .gitupstream file
+
+   * vendor/nxp/opensource/interfaces/nfc
+222d05d Add .gitupstream file
+
+   * vendor/nxp/opensource/pn5xx/halimpl
+5ccd3b9 Add .gitupstream file
+
+   * vendor/nxp/opensource/pn5xx/hidlimpl
+e078e4d Add .gitupstream file
+
+   * vendor/nxp/opensource/sn100x/halimpl
+6acef2d Add .gitupstream file
+
+   * vendor/nxp/opensource/sn100x/hidlimpl
+5b551cf Add .gitupstream file
+
+   * vendor/qcom/opensource/commonsys-intf/bluetooth
+5be730e Add .gitupstream file
+
+   * vendor/qcom/opensource/commonsys-intf/display
+7de613b7 Add .gitupstream file
+
+   * vendor/qcom/opensource/commonsys/bluetooth_ext
+dfb8d1b Add .gitupstream file
+
+   * vendor/qcom/opensource/commonsys/display
+3b6774e Add .gitupstream file
+
+   * vendor/qcom/opensource/commonsys/system/bt
+fb982cc86 Add .gitupstream file
+

@@ -1,0 +1,14 @@
+# sys_mssi_64_cn_armv82-user-12-SP1A.210812.016-1653046777560-release-keys
+- manufacturer: 
+- platform: 
+- codename: RMX3031
+- flavor: lineage_RMX3031-userdebug
+- release: 12
+- id: SQ3A.220605.009.A1
+- incremental: 1656309378
+- tags: release-keys
+- fingerprint: oplus/ossi/ossi:12/SP1A.210812.016/1653047465326:user/release-keys
+- is_ab: false
+- brand: realme
+- branch: sys_mssi_64_cn_armv82-user-12-SP1A.210812.016-1653046777560-release-keys
+- repo: realme_rmx3031_dump9604
